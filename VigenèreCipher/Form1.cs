@@ -12,7 +12,7 @@ namespace VigenèreCipher
 {
     public partial class Form1 : Form
     {
-        const string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
         int rotation;      
 
@@ -88,8 +88,36 @@ namespace VigenèreCipher
         {
             input = input.ToUpper();
             key = key.ToUpper();
+            int keyIndex = 0;
+            string decryptedText = "";
 
-            return "";
+            //For each letter in the input
+            for (int i = 0; i < input.Length; i++)
+            {
+                if ((char)input[i] == ' ')
+                {
+                    decryptedText += " ";
+                }
+                else
+                {
+                    int inputAlphaIndex = ALPHABET.IndexOf(input[i]);
+                    int keyAlphaIndex = ALPHABET.IndexOf(key[keyIndex]);
+                    char decryptedChar = ALPHABET[(26 + (inputAlphaIndex - keyAlphaIndex) - rotation) % 26];
+                    decryptedText += decryptedChar;
+                    keyIndex++;
+                }
+
+                if (keyIndex == key.Length)
+                {
+                    keyIndex = 0;
+                }
+            }
+            //Find the index of that letter in the alphabet.
+            //Then find the index of the current letter in the key.
+            //Add the two
+            //Find that index.
+
+            return decryptedText;
         }
 
         private void FunctionBtn_CheckedChanged(object sender, EventArgs e)

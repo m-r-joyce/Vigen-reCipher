@@ -155,7 +155,6 @@
             // 
             // OutputTextbox
             // 
-            this.OutputTextbox.Enabled = false;
             this.OutputTextbox.Location = new System.Drawing.Point(97, 137);
             this.OutputTextbox.Name = "OutputTextbox";
             this.OutputTextbox.Size = new System.Drawing.Size(222, 20);
