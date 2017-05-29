@@ -28,32 +28,32 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.InputTextbox = new System.Windows.Forms.TextBox();
             this.EncryptTextLbl = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.KeyTextbox = new System.Windows.Forms.TextBox();
             this.EncryptBtn = new System.Windows.Forms.RadioButton();
             this.DecryptBtn = new System.Windows.Forms.RadioButton();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.FunctionGroupbox = new System.Windows.Forms.GroupBox();
+            this.RotGroupbox = new System.Windows.Forms.GroupBox();
+            this.RotOneBtn = new System.Windows.Forms.RadioButton();
+            this.RotZeroBtn = new System.Windows.Forms.RadioButton();
             this.OutputTextbox = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.StartButton = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.groupBox1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
+            this.TimeTextbox = new System.Windows.Forms.TextBox();
+            this.FunctionGroupbox.SuspendLayout();
+            this.RotGroupbox.SuspendLayout();
             this.SuspendLayout();
             // 
-            // textBox1
+            // InputTextbox
             // 
-            this.textBox1.Location = new System.Drawing.Point(97, 6);
-            this.textBox1.MaxLength = 60;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(222, 20);
-            this.textBox1.TabIndex = 0;
+            this.InputTextbox.Location = new System.Drawing.Point(97, 6);
+            this.InputTextbox.MaxLength = 60;
+            this.InputTextbox.Name = "InputTextbox";
+            this.InputTextbox.Size = new System.Drawing.Size(222, 20);
+            this.InputTextbox.TabIndex = 0;
             // 
             // EncryptTextLbl
             // 
@@ -73,16 +73,18 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Encryption Key";
             // 
-            // textBox2
+            // KeyTextbox
             // 
-            this.textBox2.Location = new System.Drawing.Point(97, 32);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(222, 20);
-            this.textBox2.TabIndex = 3;
+            this.KeyTextbox.Location = new System.Drawing.Point(97, 32);
+            this.KeyTextbox.MaxLength = 10;
+            this.KeyTextbox.Name = "KeyTextbox";
+            this.KeyTextbox.Size = new System.Drawing.Size(222, 20);
+            this.KeyTextbox.TabIndex = 3;
             // 
             // EncryptBtn
             // 
             this.EncryptBtn.AutoSize = true;
+            this.EncryptBtn.Checked = true;
             this.EncryptBtn.Location = new System.Drawing.Point(6, 19);
             this.EncryptBtn.Name = "EncryptBtn";
             this.EncryptBtn.Size = new System.Drawing.Size(61, 17);
@@ -90,6 +92,7 @@
             this.EncryptBtn.TabStop = true;
             this.EncryptBtn.Text = "Encrypt";
             this.EncryptBtn.UseVisualStyleBackColor = true;
+            this.EncryptBtn.CheckedChanged += new System.EventHandler(this.FunctionBtn_CheckedChanged);
             // 
             // DecryptBtn
             // 
@@ -101,50 +104,54 @@
             this.DecryptBtn.TabStop = true;
             this.DecryptBtn.Text = "Decrypt";
             this.DecryptBtn.UseVisualStyleBackColor = true;
+            this.DecryptBtn.CheckedChanged += new System.EventHandler(this.FunctionBtn_CheckedChanged);
             // 
-            // groupBox1
+            // FunctionGroupbox
             // 
-            this.groupBox1.Controls.Add(this.EncryptBtn);
-            this.groupBox1.Controls.Add(this.DecryptBtn);
-            this.groupBox1.Location = new System.Drawing.Point(15, 58);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(149, 44);
-            this.groupBox1.TabIndex = 6;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Function";
+            this.FunctionGroupbox.Controls.Add(this.EncryptBtn);
+            this.FunctionGroupbox.Controls.Add(this.DecryptBtn);
+            this.FunctionGroupbox.Location = new System.Drawing.Point(15, 58);
+            this.FunctionGroupbox.Name = "FunctionGroupbox";
+            this.FunctionGroupbox.Size = new System.Drawing.Size(149, 44);
+            this.FunctionGroupbox.TabIndex = 6;
+            this.FunctionGroupbox.TabStop = false;
+            this.FunctionGroupbox.Text = "Function";
             // 
-            // groupBox2
+            // RotGroupbox
             // 
-            this.groupBox2.Controls.Add(this.radioButton2);
-            this.groupBox2.Controls.Add(this.radioButton1);
-            this.groupBox2.Location = new System.Drawing.Point(170, 59);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(149, 43);
-            this.groupBox2.TabIndex = 7;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Rotation";
+            this.RotGroupbox.Controls.Add(this.RotOneBtn);
+            this.RotGroupbox.Controls.Add(this.RotZeroBtn);
+            this.RotGroupbox.Location = new System.Drawing.Point(170, 59);
+            this.RotGroupbox.Name = "RotGroupbox";
+            this.RotGroupbox.Size = new System.Drawing.Size(149, 43);
+            this.RotGroupbox.TabIndex = 7;
+            this.RotGroupbox.TabStop = false;
+            this.RotGroupbox.Text = "Rotation";
             // 
-            // radioButton2
+            // RotOneBtn
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(68, 18);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(54, 17);
-            this.radioButton2.TabIndex = 1;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "ROT1";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.RotOneBtn.AutoSize = true;
+            this.RotOneBtn.Location = new System.Drawing.Point(68, 18);
+            this.RotOneBtn.Name = "RotOneBtn";
+            this.RotOneBtn.Size = new System.Drawing.Size(54, 17);
+            this.RotOneBtn.TabIndex = 1;
+            this.RotOneBtn.TabStop = true;
+            this.RotOneBtn.Text = "ROT1";
+            this.RotOneBtn.UseVisualStyleBackColor = true;
+            this.RotOneBtn.CheckedChanged += new System.EventHandler(this.RotationBtn_CheckChanged);
             // 
-            // radioButton1
+            // RotZeroBtn
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(8, 18);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(54, 17);
-            this.radioButton1.TabIndex = 0;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "ROT0";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.RotZeroBtn.AutoSize = true;
+            this.RotZeroBtn.Checked = true;
+            this.RotZeroBtn.Location = new System.Drawing.Point(8, 18);
+            this.RotZeroBtn.Name = "RotZeroBtn";
+            this.RotZeroBtn.Size = new System.Drawing.Size(54, 17);
+            this.RotZeroBtn.TabIndex = 0;
+            this.RotZeroBtn.TabStop = true;
+            this.RotZeroBtn.Text = "ROT0";
+            this.RotZeroBtn.UseVisualStyleBackColor = true;
+            this.RotZeroBtn.CheckedChanged += new System.EventHandler(this.RotationBtn_CheckChanged);
             // 
             // OutputTextbox
             // 
@@ -154,14 +161,15 @@
             this.OutputTextbox.Size = new System.Drawing.Size(222, 20);
             this.OutputTextbox.TabIndex = 8;
             // 
-            // button1
+            // StartButton
             // 
-            this.button1.Location = new System.Drawing.Point(15, 108);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(304, 23);
-            this.button1.TabIndex = 9;
-            this.button1.Text = "Start";
-            this.button1.UseVisualStyleBackColor = true;
+            this.StartButton.Location = new System.Drawing.Point(15, 108);
+            this.StartButton.Name = "StartButton";
+            this.StartButton.Size = new System.Drawing.Size(304, 23);
+            this.StartButton.TabIndex = 9;
+            this.StartButton.Text = "Start";
+            this.StartButton.UseVisualStyleBackColor = true;
+            this.StartButton.Click += new System.EventHandler(this.StartButton_Click);
             // 
             // label2
             // 
@@ -177,39 +185,39 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(12, 169);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(46, 13);
+            this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 11;
-            this.label3.Text = "Runtime";
+            this.label3.Text = "Time to Process";
             // 
-            // textBox3
+            // TimeTextbox
             // 
-            this.textBox3.Location = new System.Drawing.Point(97, 166);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(222, 20);
-            this.textBox3.TabIndex = 12;
+            this.TimeTextbox.Location = new System.Drawing.Point(97, 166);
+            this.TimeTextbox.Name = "TimeTextbox";
+            this.TimeTextbox.Size = new System.Drawing.Size(222, 20);
+            this.TimeTextbox.TabIndex = 12;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(332, 197);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.TimeTextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.StartButton);
             this.Controls.Add(this.OutputTextbox);
-            this.Controls.Add(this.groupBox2);
-            this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.RotGroupbox);
+            this.Controls.Add(this.FunctionGroupbox);
+            this.Controls.Add(this.KeyTextbox);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EncryptTextLbl);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InputTextbox);
             this.Name = "Form1";
             this.Text = "Vigenère Engineer";
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
+            this.FunctionGroupbox.ResumeLayout(false);
+            this.FunctionGroupbox.PerformLayout();
+            this.RotGroupbox.ResumeLayout(false);
+            this.RotGroupbox.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -217,21 +225,21 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox InputTextbox;
         private System.Windows.Forms.Label EncryptTextLbl;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox KeyTextbox;
         private System.Windows.Forms.RadioButton EncryptBtn;
         private System.Windows.Forms.RadioButton DecryptBtn;
-        private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.GroupBox groupBox2;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.GroupBox FunctionGroupbox;
+        private System.Windows.Forms.GroupBox RotGroupbox;
+        private System.Windows.Forms.RadioButton RotOneBtn;
+        private System.Windows.Forms.RadioButton RotZeroBtn;
         private System.Windows.Forms.TextBox OutputTextbox;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button StartButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox TimeTextbox;
     }
 }
 
