@@ -211,7 +211,9 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.EncryptTextLbl);
             this.Controls.Add(this.InputTextbox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Vigenère Engineer";
             this.FunctionGroupbox.ResumeLayout(false);
             this.FunctionGroupbox.PerformLayout();
