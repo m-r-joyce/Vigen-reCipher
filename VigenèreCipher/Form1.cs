@@ -14,7 +14,7 @@ namespace VigenèreCipher
 {
     public partial class Form1 : Form
     {
-        const string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        const string ALPHABET = "ABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZABCDEFGHIJKLMNOPQRSTUVWXYZ";
         int rotation;      
 
         public Form1()
@@ -31,7 +31,7 @@ namespace VigenèreCipher
             //Message must be at least 20 characters, no punctuation...
             Regex inputExpression = new Regex(@"^[a-zA-Z\s+]{20,}$");
             //...and key must be at least 5 characters, no punctuation.
-            Regex keyExpression = new Regex(@"^[a-zA-Z\s+]{5,}$");     
+            Regex keyExpression = new Regex(@"^[a-zA-Z]{5,}$");     
                    
             Stopwatch watch = Stopwatch.StartNew();
 
