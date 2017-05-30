@@ -49,16 +49,16 @@
             // 
             // InputTextbox
             // 
-            this.InputTextbox.Location = new System.Drawing.Point(97, 6);
+            this.InputTextbox.Location = new System.Drawing.Point(97, 9);
             this.InputTextbox.MaxLength = 60;
             this.InputTextbox.Name = "InputTextbox";
-            this.InputTextbox.Size = new System.Drawing.Size(222, 20);
+            this.InputTextbox.Size = new System.Drawing.Size(420, 20);
             this.InputTextbox.TabIndex = 0;
             // 
             // EncryptTextLbl
             // 
             this.EncryptTextLbl.AutoSize = true;
-            this.EncryptTextLbl.Location = new System.Drawing.Point(12, 9);
+            this.EncryptTextLbl.Location = new System.Drawing.Point(35, 12);
             this.EncryptTextLbl.Name = "EncryptTextLbl";
             this.EncryptTextLbl.Size = new System.Drawing.Size(55, 13);
             this.EncryptTextLbl.TabIndex = 1;
@@ -67,7 +67,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 35);
+            this.label1.Location = new System.Drawing.Point(12, 45);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(78, 13);
             this.label1.TabIndex = 2;
@@ -75,17 +75,17 @@
             // 
             // KeyTextbox
             // 
-            this.KeyTextbox.Location = new System.Drawing.Point(97, 32);
+            this.KeyTextbox.Location = new System.Drawing.Point(97, 42);
             this.KeyTextbox.MaxLength = 10;
             this.KeyTextbox.Name = "KeyTextbox";
-            this.KeyTextbox.Size = new System.Drawing.Size(222, 20);
+            this.KeyTextbox.Size = new System.Drawing.Size(420, 20);
             this.KeyTextbox.TabIndex = 3;
             // 
             // EncryptBtn
             // 
             this.EncryptBtn.AutoSize = true;
             this.EncryptBtn.Checked = true;
-            this.EncryptBtn.Location = new System.Drawing.Point(6, 19);
+            this.EncryptBtn.Location = new System.Drawing.Point(6, 17);
             this.EncryptBtn.Name = "EncryptBtn";
             this.EncryptBtn.Size = new System.Drawing.Size(61, 17);
             this.EncryptBtn.TabIndex = 4;
@@ -97,7 +97,7 @@
             // DecryptBtn
             // 
             this.DecryptBtn.AutoSize = true;
-            this.DecryptBtn.Location = new System.Drawing.Point(82, 19);
+            this.DecryptBtn.Location = new System.Drawing.Point(82, 17);
             this.DecryptBtn.Name = "DecryptBtn";
             this.DecryptBtn.Size = new System.Drawing.Size(62, 17);
             this.DecryptBtn.TabIndex = 5;
@@ -110,7 +110,7 @@
             // 
             this.FunctionGroupbox.Controls.Add(this.EncryptBtn);
             this.FunctionGroupbox.Controls.Add(this.DecryptBtn);
-            this.FunctionGroupbox.Location = new System.Drawing.Point(15, 58);
+            this.FunctionGroupbox.Location = new System.Drawing.Point(523, 6);
             this.FunctionGroupbox.Name = "FunctionGroupbox";
             this.FunctionGroupbox.Size = new System.Drawing.Size(149, 44);
             this.FunctionGroupbox.TabIndex = 6;
@@ -121,9 +121,9 @@
             // 
             this.RotGroupbox.Controls.Add(this.RotOneBtn);
             this.RotGroupbox.Controls.Add(this.RotZeroBtn);
-            this.RotGroupbox.Location = new System.Drawing.Point(170, 59);
+            this.RotGroupbox.Location = new System.Drawing.Point(523, 56);
             this.RotGroupbox.Name = "RotGroupbox";
-            this.RotGroupbox.Size = new System.Drawing.Size(149, 43);
+            this.RotGroupbox.Size = new System.Drawing.Size(149, 44);
             this.RotGroupbox.TabIndex = 7;
             this.RotGroupbox.TabStop = false;
             this.RotGroupbox.Text = "Rotation";
@@ -131,7 +131,7 @@
             // RotOneBtn
             // 
             this.RotOneBtn.AutoSize = true;
-            this.RotOneBtn.Location = new System.Drawing.Point(68, 18);
+            this.RotOneBtn.Location = new System.Drawing.Point(82, 18);
             this.RotOneBtn.Name = "RotOneBtn";
             this.RotOneBtn.Size = new System.Drawing.Size(54, 17);
             this.RotOneBtn.TabIndex = 1;
@@ -155,16 +155,16 @@
             // 
             // OutputTextbox
             // 
-            this.OutputTextbox.Location = new System.Drawing.Point(97, 137);
+            this.OutputTextbox.Location = new System.Drawing.Point(97, 75);
             this.OutputTextbox.Name = "OutputTextbox";
-            this.OutputTextbox.Size = new System.Drawing.Size(222, 20);
+            this.OutputTextbox.Size = new System.Drawing.Size(420, 20);
             this.OutputTextbox.TabIndex = 8;
             // 
             // StartButton
             // 
-            this.StartButton.Location = new System.Drawing.Point(15, 108);
+            this.StartButton.Location = new System.Drawing.Point(523, 106);
             this.StartButton.Name = "StartButton";
-            this.StartButton.Size = new System.Drawing.Size(304, 23);
+            this.StartButton.Size = new System.Drawing.Size(149, 23);
             this.StartButton.TabIndex = 9;
             this.StartButton.Text = "Start";
             this.StartButton.UseVisualStyleBackColor = true;
@@ -173,7 +173,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(12, 140);
+            this.label2.Location = new System.Drawing.Point(27, 78);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(63, 13);
             this.label2.TabIndex = 10;
@@ -182,7 +182,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(12, 169);
+            this.label3.Location = new System.Drawing.Point(7, 111);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(83, 13);
             this.label3.TabIndex = 11;
@@ -190,16 +190,17 @@
             // 
             // TimeTextbox
             // 
-            this.TimeTextbox.Location = new System.Drawing.Point(97, 166);
+            this.TimeTextbox.Location = new System.Drawing.Point(96, 108);
             this.TimeTextbox.Name = "TimeTextbox";
-            this.TimeTextbox.Size = new System.Drawing.Size(222, 20);
+            this.TimeTextbox.Size = new System.Drawing.Size(420, 20);
             this.TimeTextbox.TabIndex = 12;
             // 
             // Form1
             // 
+            this.AcceptButton = this.StartButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 197);
+            this.ClientSize = new System.Drawing.Size(684, 139);
             this.Controls.Add(this.TimeTextbox);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
